@@ -1,0 +1,3 @@
+<DnaLibrary Name="AldrinAddIn64" RuntimeVersion="v4.0" ExplicitRegistration="true">
+  <ExternalLibrary Path="AldrinAddIn.dll" LoadFromBytes="false" Pack="true" />
+</DnaLibrary>

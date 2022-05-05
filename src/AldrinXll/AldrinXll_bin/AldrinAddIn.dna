@@ -1,0 +1,53 @@
+<DnaLibrary Name="Aldrin Analytics" RuntimeVersion="v4.0" ExplicitRegistration="true">
+  <ExternalLibrary Path="AldrinAddIn.dll" LoadFromBytes="false" Pack="true" />
+
+
+	<CustomUI>
+		<customUI xmlns='http://schemas.microsoft.com/office/2009/07/customui'>
+			<ribbon>
+				<tabs>
+					<tab id='AldrinTab' label='Aldrin' visible='true'>
+						<group id='AldrinGroup2' label='Aldrin Analytics' visible='true'>
+							<menu id="menu" label="Aldrin Analytics" >
+								<button id='ZeliadeButton2' imageMso="TableSharePointListsModifyColumnsAndSettings" label="Debug" screentip="Display log dialog" onAction='LogDisplay' visible='true'/>
+								<menuSeparator id="separator" />
+								<button id="Dump" label="Dump objets XL" imageMso="Bold" onAction='ObjectExplorer' />
+							</menu>
+						</group>
+					</tab>
+				</tabs>
+			</ribbon>
+
+			<contextMenus>
+				<contextMenu idMso="ContextMenuCell">					
+					<button id="Recalculate" label="Recalculate" insertBeforeMso="Cut" onAction="Recalculate" imageMso="ObjectRotateFree"/>
+					<button id="ObjectFormat" label="ObjectFormat" insertBeforeMso="Cut" onAction="ObjectFormat" imageMso="FramePropertiesDialog"/>
+					<menuSeparator id="MySeparator0" insertBeforeMso="Cut" />
+
+				</contextMenu>
+				
+				<contextMenu idMso="ContextMenuListRange">
+					<button id="ContextMenuListRangeRecalculate" label="Recalculate" imageMso="HappyFace" insertBeforeMso="Cut" onAction="ObjectRotateFree" />
+					<button id="ContextMenuListRangeObjectFormat" label="ObjectFormat"  imageMso="HappyFace" insertBeforeMso="Cut" onAction="FramePropertiesDialog" />
+					<menuSeparator id="MySeparator1" insertBeforeMso="Cut" />
+				</contextMenu>
+					
+				<contextMenu idMso="ContextMenuRow">
+					<button id="ContextMenuRowRecalculate" label="Recalculate" imageMso="HappyFace" insertBeforeMso="Cut" onAction="ObjectRotateFree" />
+					<button id="ContextMenuRowObjectFormat" label="ObjectFormat"  imageMso="HappyFace" insertBeforeMso="Cut" onAction="FramePropertiesDialog" />
+					<menuSeparator id="MySeparator2" insertBeforeMso="Cut" />
+				</contextMenu>
+				
+				<contextMenu idMso="ContextMenuColumn">
+					<button id="ContextMenuColumnRecalculate" label="Recalculate" imageMso="HappyFace" insertBeforeMso="Cut" onAction="ObjectRotateFree" />
+					<button id="ContextMenuColumnObjectFormat" label="ObjectFormat"  imageMso="HappyFace" insertBeforeMso="Cut" onAction="FramePropertiesDialog" />
+					<menuSeparator id="MySeparator3" insertBeforeMso="Cut" />
+				</contextMenu>		
+				
+			</contextMenus>
+
+		</customUI>
+	</CustomUI>
+
+
+</DnaLibrary>

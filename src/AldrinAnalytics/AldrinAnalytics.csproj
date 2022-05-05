@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F327625A-DEC3-40C6-A669-ACAA62A77721}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AldrinAnalytics</RootNamespace>
+    <AssemblyName>AldrinAnalytics</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calibration\SingleNameDataSheet.cs" />
+    <Compile Include="Excel\Codings.cs" />
+    <Compile Include="Excel\Deltas.cs" />
+    <Compile Include="Excel\GenericSet.cs" />
+    <Compile Include="Excel\Markets.cs" />
+    <Compile Include="Instruments\AssetFloatRateProductPriceReset.cs" />
+    <Compile Include="Instruments\AssetLegFloatRateProduct.cs" />
+    <Compile Include="Instruments\AssetLegReset.cs" />
+    <Compile Include="Instruments\AssetLegResetFloatRateProduct.cs" />
+    <Compile Include="Instruments\AssetLegPriceResetProduct.cs" />
+    <Compile Include="Instruments\AssetLegResetProduct.cs" />
+    <Compile Include="Instruments\AssetLegPriceResetFloatRateProduct.cs" />
+    <Compile Include="Instruments\Book.cs" />
+    <Compile Include="LogPath.cs" />
+    <Compile Include="Models\AffinePriceModel.cs" />
+    <Compile Include="Pricers\AssetLegFloatRateFormula.cs" />
+    <Compile Include="Pricers\DataSheetContainer.cs" />
+    <Compile Include="Pricers\ForwardRateCurveMarket.cs" />
+    <Compile Include="Pricers\GlobalMarket.cs" />
+    <Compile Include="Pricers\LiborDiscountingMarket.cs" />
+    <Compile Include="Pricers\OisCurveMarket.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Pricers\IRepoCurve.cs" />
+    <Compile Include="Pricers\IDividendCurve.cs" />
+    <Compile Include="Pricers\SingleNameMarket.cs" />
+    <Compile Include="Instruments\AssetLeg.cs" />
+    <Compile Include="Calibration\DividendEstimate.cs" />
+    <Compile Include="Calibration\RepoRate.cs" />
+    <Compile Include="Instruments\TotalReturnSwap.cs" />
+    <Compile Include="Pricers\TrsPricingRequest.cs" />
+    <Compile Include="Calibration\RepoCurveBootstrapper.cs" />
+    <Compile Include="Calibration\DividendCurveBootstrapper.cs" />
+    <Compile Include="Instruments\Ticker.cs" />
+    <Compile Include="Pricers\RepoDeltaMatrix.cs" />
+    <Compile Include="Calibration\Security.cs" />
+    <Compile Include="Pricers\RepoMarket.cs" />
+    <Compile Include="Instruments\SecurityBasket.cs" />
+    <Compile Include="Pricers\AssetLegStdFormula.cs" />
+    <Compile Include="Pricers\DividendMarket.cs" />
+    <Compile Include="Pricers\IForwardCurve.cs" />
+    <Compile Include="Pricers\IForwardForexCurve.cs" />
+    <Compile Include="Instruments\CurrencyPair.cs" />
+    <Compile Include="Pricers\FxCurveMarket.cs" />
+    <Compile Include="Pricers\ForwardBasket.cs" />
+    <Compile Include="Instruments\ICollateralScheme.cs" />
+    <Compile Include="Calibration\IBumpSheetTypeSet.cs" />
+    <Compile Include="Pricers\GenericMarket.cs" />
+    <Compile Include="Calibration\GenericBootstrapper.cs" />
+    <Compile Include="Pricers\GenericPricer.cs" />
+    <Compile Include="Instruments\SingleNameTicker.cs" />
+    <Compile Include="Calibration\SecurityBootstrapper.cs" />
+    <Compile Include="Calibration\RateCurveBootstrapper.cs" />
+    <Compile Include="Instruments\Libor.cs" />
+    <Compile Include="Calibration\AllIn.cs" />
+    <Compile Include="Calibration\BidAskBootstrapper.cs" />
+    <Compile Include="Calibration\DividendCoarse.cs" />
+    <Compile Include="Calibration\FxCurveBootstrapper.cs" />
+    <Compile Include="Calibration\AllInCoarse.cs" />
+    <Compile Include="Excel\DataSheets.cs" />
+    <Compile Include="Excel\Baskets.cs" />
+    <Compile Include="Models\BlackScholesGenerator.cs" />
+    <Compile Include="Instruments\AssetLegProduct.cs" />
+    <Compile Include="Models\JointModel.cs" />
+    <Compile Include="Pricers\AssetProductMCPricer.cs" />
+    <Compile Include="Models\ISingleTickerModel.cs" />
+    <Compile Include="Models\BlackScholesBasket.cs" />
+    <Compile Include="Pricers\IPricingSetting.cs" />
+    <Compile Include="Excel\BookPricer.cs" />
+    <Compile Include="Excel\ModelSet.cs" />
+    <Compile Include="Excel\PricingContextSet.cs" />
+    <Compile Include="Excel\PricingSettingSet.cs" />
+    <Compile Include="Models\HistoricalJointModel.cs" />
+    <Compile Include="Excel\HistoFixings.cs" />
+    <Compile Include="Models\ForwardRateCurveHistoCompletion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Zeliade.Finance.Common">
+      <HintPath>..\..\bin\Zeliade.Finance.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Zeliade.Common">
+      <HintPath>..\..\bin\Zeliade.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Zeliade.Finance.Mrc">
+      <HintPath>..\..\bin\Zeliade.Finance.Mrc.dll</HintPath>
+    </Reference>
+    <Reference Include="Zeliade.Math">
+      <HintPath>..\..\bin\Zeliade.Math.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,7 @@
+# Package generated on: Wed 09/30/2020 10:16:14.32
+# ProductName : AldrinAnalytics
+# Version : 1.0.0
+# This package is generated for Aldrin
+# Revision : .147-g9894131
+# Branch : master
+master-1.0.0.147-g9894131

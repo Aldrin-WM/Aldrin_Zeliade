@@ -1,0 +1,7 @@
+# Package generated on: Wed 09/30/2020  9:57:00.72
+# ProductName : Zeliade.QuantFramework
+# Version : 1.9.0
+# This package is generated for Aldrin
+# Revision : .35-gab79e22
+# Branch : master
+master-1.9.0.35-gab79e22
